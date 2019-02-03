@@ -20,4 +20,7 @@ To Do list:
 - [ ] [Smart Home App UI](https://dribbble.com/shots/4585243-Smart-Home-App-Ui/attachments/1036679)
 ![Smart Home App UI](https://cdn.dribbble.com/users/968354/screenshots/4585243/attachments/1036679/smart_home_app_ui_attachment.png)
 
+- [ ] [Travel Article App UI](https://dribbble.com/shots/5717917-Travel-Article-Application/attachments/1234851)
+![Smart Home App UI](https://cdn.dribbble.com/users/1631607/screenshots/5717917/attachments/1234851/____-1.0.png)
+
 - [ ] [-> Share your screen design <-](https://github.com/react-ui-kit/dribbble2react/issues/new?assignees=&labels=&template=feature_request.md&title=)
