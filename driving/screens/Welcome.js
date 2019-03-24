@@ -151,7 +151,7 @@ export default class Welcome extends Component {
         <Badge color={rgba(theme.colors.primary, '0.1')} size={144}>
           <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate("Trip")}>
             <Badge color={theme.colors.primary} size={62}>
-              <Icon.FontAwesome name="automobile" size={62 / 2} color="white" />
+              <Icon.FontAwesome name="automobile" size={62 / 2.5} color="white" />
             </Badge>
           </TouchableOpacity>
         </Badge>
