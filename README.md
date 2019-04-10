@@ -1,6 +1,9 @@
 # dribbble2react
 We're transforming [Dribbble](https://dribbble.com/) designs to React / React-Native code
 
+Don't miss the updates when I release new apps, just subscribe to our [React-UI-Kit newsletter](https://react-ui-kit.com/)
+
+
 | Project | Expo | Preview | Screens | Estimation | Status |
 | ------ | ------ | :------: | :------: | :------: | :------: |
 | [Camping Spots Finder App](https://dribbble.com/shots/5765449-Camping-Spots-Finder-App-Day-364-365-Project365/attachments/1243964) | [View Snack](https://snack.expo.io/@react-ui-kit/camping-spots-finder-app) | <img src="https://cdn.dribbble.com/users/386883/screenshots/5765449/attachments/1243964/30122018-design.png" width="120" /> | 2 | 5 hours | :white_check_mark: |
