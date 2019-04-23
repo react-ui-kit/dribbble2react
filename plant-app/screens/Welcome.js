@@ -19,7 +19,7 @@ class Welcome extends Component {
 
   renderTermsService() {
     return (
-      <Modal animationType="slide" visible={this.state.showTerms}>
+      <Modal animationType="slide" visible={this.state.showTerms} onRequestClose={() => this.setState({ showTerms: false })}>
         <Block padding={[theme.sizes.padding * 2, theme.sizes.padding]} space="between">
           <Text h2 light>Terms of Service</Text>
 
