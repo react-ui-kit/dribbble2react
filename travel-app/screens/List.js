@@ -9,6 +9,7 @@ import {
   Image,
   ImageBackground,
   Dimensions,
+  Platform,
   TouchableOpacity
 } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -100,7 +101,7 @@ const mocks = [
 ]
 const styles = StyleSheet.create({
   flex: {
-    flex: 1,
+    flex: 0,
   },
   column: {
     flexDirection: 'column'
@@ -121,6 +122,7 @@ const styles = StyleSheet.create({
   destinations: {
     flex: 1,
     justifyContent: 'space-between',
+    paddingBottom: 30,
   },
   destination: {
     width: width - (theme.sizes.padding * 2),
@@ -135,10 +137,10 @@ const styles = StyleSheet.create({
     borderRadius: theme.sizes.radius,
     paddingHorizontal: theme.sizes.padding,
     paddingVertical: theme.sizes.padding / 2,
-    bottom: -theme.sizes.padding,
-    right: theme.sizes.padding,
-    left: theme.sizes.padding,
+    bottom: 20,
+    left: (width - (theme.sizes.padding * 4)) / (Platform.OS === 'ios' ? 3.2 : 3),
     backgroundColor: theme.colors.white,
+    width: width - (theme.sizes.padding * 4),
   },
   recommended: {
   },
@@ -146,7 +148,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     paddingHorizontal: theme.sizes.padding,
-    marginVertical: theme.sizes.margin * 0.66
   },
   recommendedList: {
   },
@@ -155,13 +156,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
     backgroundColor: theme.colors.white,
     overflow: 'hidden',
-    borderTopRightRadius: theme.sizes.border,
-    borderTopLeftRadius: theme.sizes.border,
+    borderRadius: theme.sizes.radius,
+    marginVertical: theme.sizes.margin * 0.5,
   },
   recommendationHeader: {
     overflow: 'hidden',
-    borderTopRightRadius: theme.sizes.border,
-    borderTopLeftRadius: theme.sizes.border,
+    borderTopRightRadius: theme.sizes.radius,
+    borderTopLeftRadius: theme.sizes.radius,
   },
   recommendationOptions: {
     alignItems: 'center',
@@ -198,6 +199,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.05,
     shadowRadius: 10,
+    elevation: 5,
   },
   dots: {
     width: 10,
@@ -239,7 +241,7 @@ class Articles extends Component {
     return (
       <View style={[
         styles.flex, styles.row,
-        { justifyContent: 'center', alignItems: 'center', marginTop: (theme.sizes.margin * 2) }
+        { justifyContent: 'center', alignItems: 'center', marginTop: 10 }
       ]}>
         {destinations.map((item, index) => {
           const borderWidth = dotPosition.interpolate({
@@ -286,7 +288,7 @@ class Articles extends Component {
           decelerationRate={0}
           scrollEventThrottle={16}
           snapToAlignment="center"
-          style={{ overflow:'visible' }}
+          style={{ overflow:'visible', height: 280 }}
           data={this.props.destinations}
           keyExtractor={(item, index) => `${item.id}`}
           onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: this.scrollX }} }])}
@@ -325,6 +327,7 @@ class Articles extends Component {
               <Text style={styles.rating}>{item.rating}</Text>
             </View>
           </View>
+        </ImageBackground>
           <View style={[styles.column, styles.destinationInfo, styles.shadow]}>
             <Text style={{ fontSize: theme.sizes.font * 1.25, fontWeight: '500', paddingBottom: 8, }}>
               {item.title}
@@ -340,7 +343,6 @@ class Articles extends Component {
               />
             </View>
           </View>
-        </ImageBackground>
       </TouchableOpacity>
     )
   }
@@ -367,7 +369,7 @@ class Articles extends Component {
             showsHorizontalScrollIndicator={false}
             scrollEventThrottle={16}
             snapToAlignment="center"
-            style={{ overflow: 'visible' }}
+            style={[ styles.shadow, { overflow: 'visible' }]}
             data={this.props.destinations}
             keyExtractor={(item, index) => `${item.id}`}
             renderItem={({ item, index }) => this.renderRecommendation(item, index)}
@@ -382,7 +384,7 @@ class Articles extends Component {
     const isLastItem = index === destinations.length - 1;
     return (
       <View style={[
-        styles.flex, styles.column, styles.recommendation, 
+        styles.flex, styles.column, styles.recommendation, styles.shadow, 
         index === 0 ? { marginLeft: theme.sizes.margin } : null,
         isLastItem ? { marginRight: theme.sizes.margin / 2 } : null,
       ]}>
