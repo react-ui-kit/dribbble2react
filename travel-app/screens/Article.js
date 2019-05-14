@@ -10,7 +10,7 @@ const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   flex: {
-    flex: 1,
+    flex: 0,
   },
   column: {
     flexDirection: 'column'
@@ -24,6 +24,10 @@ const styles = StyleSheet.create({
     paddingTop: theme.sizes.padding,
     justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   },
   back: {
     width: theme.sizes.base * 3,
@@ -40,8 +44,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     padding: theme.sizes.padding,
     backgroundColor: theme.colors.white,
-    borderTopLeftRadius: theme.sizes.border,
-    borderTopRightRadius: theme.sizes.border,
+    borderTopLeftRadius: theme.sizes.radius,
+    borderTopRightRadius: theme.sizes.radius,
     marginTop: -theme.sizes.padding / 2,
   },
   avatar: {

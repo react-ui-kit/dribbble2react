@@ -12,7 +12,6 @@ const sizes = {
   padding: 36,
   margin: 36,
   title: 24,
-  border: 16,
   radius: 12,
 };
 
