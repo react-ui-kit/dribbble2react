@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, FlatList, Dimensions, TouchableOpacity, TouchableWithoutFeedback } from 'react-native'
+import {
+  Text,
+  StyleSheet,
+  View,
+  ScrollView,
+  Dimensions,
+  TouchableOpacity,
+  TouchableWithoutFeedback
+} from "react-native";
 import MapView from 'react-native-maps';
 import Modal from 'react-native-modal';
 import Dropdown from 'react-native-modal-dropdown';
@@ -67,6 +75,8 @@ class ParkingMap extends Component {
     activeModal: null,
   }
 
+  parkingRef = React.createRef();
+
   componentWillMount() {
     const { parkings } = this.props;
     const hours = {};
@@ -104,7 +114,10 @@ class ParkingMap extends Component {
     const totalPrice = item.price * hours[item.id];
 
     return (
-      <TouchableWithoutFeedback key={`parking-${item.id}`} onPress={() => this.setState({ active: item.id })} >
+      <TouchableWithoutFeedback
+        key={`parking-${item.id}`}
+        onPress={() => this.setState({ active: item.id })}
+      >
         <View style={[styles.parking, styles.shadow]}>
           <View style={styles.hours}>
             <Text style={styles.hoursTitle}>x {item.spots} {item.title}</Text>
@@ -145,21 +158,44 @@ class ParkingMap extends Component {
   }
 
   renderParkings = () => {
+    const { parkings } = this.props;
+
     return (
-      <FlatList
+      <ScrollView
+        ref={this.parkingRef}
         horizontal
         pagingEnabled
         scrollEnabled
         showsHorizontalScrollIndicator={false}
+        decelerationRate={0}
         scrollEventThrottle={16}
         snapToAlignment="center"
         style={styles.parkings}
-        data={this.props.parkings}
-        extraData={this.state}
-        keyExtractor={(item, index) => `${item.id}`}
-        renderItem={({ item }) => this.renderParking(item)}
-      />
-    )
+      >
+        {parkings.map(item => this.renderParking(item))}
+      </ScrollView>
+    );
+    // return (
+    //   <FlatList
+    //     ref={this.parkingRef}
+    //     horizontal
+    //     pagingEnabled
+    //     scrollEnabled
+    //     showsHorizontalScrollIndicator={false}
+    //     scrollEventThrottle={16}
+    //     snapToAlignment="center"
+    //     style={styles.parkings}
+    //     data={this.props.parkings}
+    //     extraData={this.state}
+    //     keyExtractor={(item, index) => `${item.id}`}
+    //     renderItem={({ item }) => this.renderParking(item)}
+    //     getItemLayout={(data, index) => ({
+    //       length: width - 24 * 2,
+    //       offset: (width - 24 * 2) * index,
+    //       index
+    //     })}
+    //   />
+    // );
   }
 
   renderHours(id) {
@@ -256,12 +292,19 @@ class ParkingMap extends Component {
           initialRegion={currentPosition}
           style={styles.map}
         >
-          {parkings.map(parking => (
+          {parkings.map((parking, index) => (
             <Marker
               key={`marker-${parking.id}`}
               coordinate={parking.coordinate}
             >
-              <TouchableWithoutFeedback onPress={() => this.setState({ active: parking.id })} >
+              <TouchableWithoutFeedback
+                onPress={() => {
+                  this.setState({ active: parking.id });
+                  this.parkingRef.current &&
+                    this.parkingRef.current.scrollTo({
+                      x: width * index
+                    });
+                }}>
                 <View style={[
                   styles.marker,
                   styles.shadow,
