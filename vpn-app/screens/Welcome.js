@@ -55,7 +55,7 @@ export default class Welcome extends Component {
         snapToAlignment="center"
         showsHorizontalScrollIndicator={false}
         onScroll={Animated.event([
-          { nativeEvent: { contentOffset: { x: this.scrollX } } }
+          { nativeEvent: { contentOffset: { x: { ...this.scrollX } } } }
         ])}
       >
         {backgrounds.map((item, index) => (
