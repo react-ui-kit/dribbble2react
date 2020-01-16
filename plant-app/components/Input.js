@@ -1,25 +1,29 @@
-import React, { Component } from 'react'
-import { StyleSheet, TextInput } from 'react-native'
-import { Icon } from 'expo';
+import React, { Component } from "react";
+import { StyleSheet, TextInput } from "react-native";
+import * as Icon from "@expo/vector-icons";
 
-import Text from './Text';
-import Block from './Block';
-import Button from './Button';
-import { theme } from '../constants';
+import Text from "./Text";
+import Block from "./Block";
+import Button from "./Button";
+import { theme } from "../constants";
 
 export default class Input extends Component {
   state = {
-    toggleSecure: false,
-  }
+    toggleSecure: false
+  };
 
   renderLabel() {
     const { label, error } = this.props;
 
     return (
       <Block flex={false}>
-        {label ? <Text gray2={!error} accent={error}>{label}</Text> : null}
+        {label ? (
+          <Text gray2={!error} accent={error}>
+            {label}
+          </Text>
+        ) : null}
       </Block>
-    )
+    );
   }
 
   renderToggle() {
@@ -33,14 +37,15 @@ export default class Input extends Component {
         style={styles.toggle}
         onPress={() => this.setState({ toggleSecure: !toggleSecure })}
       >
-        {
-          rightLabel ? rightLabel :
-            <Icon.Ionicons
-              color={theme.colors.gray}
-              size={theme.sizes.font * 1.35}
-              name={!toggleSecure ? "md-eye" : "md-eye-off"}
+        {rightLabel ? (
+          rightLabel
+        ) : (
+          <Icon.Ionicons
+            color={theme.colors.gray}
+            size={theme.sizes.font * 1.35}
+            name={!toggleSecure ? "md-eye" : "md-eye-off"}
           />
-        }
+        )}
       </Button>
     );
   }
@@ -61,15 +66,7 @@ export default class Input extends Component {
   }
 
   render() {
-    const {
-      email,
-      phone,
-      number,
-      secure,
-      error,
-      style,
-      ...props
-    } = this.props;
+    const { email, phone, number, secure, error, style, ...props } = this.props;
 
     const { toggleSecure } = this.state;
     const isSecure = toggleSecure ? false : secure;
@@ -77,13 +74,16 @@ export default class Input extends Component {
     const inputStyles = [
       styles.input,
       error && { borderColor: theme.colors.accent },
-      style,
+      style
     ];
 
     const inputType = email
-      ? 'email-address' : number
-      ? 'numeric' : phone
-      ? 'phone-pad' : 'default';
+      ? "email-address"
+      : number
+      ? "numeric"
+      : phone
+      ? "phone-pad"
+      : "default";
 
     return (
       <Block flex={false} margin={[theme.sizes.base, 0]}>
@@ -100,7 +100,7 @@ export default class Input extends Component {
         {this.renderToggle()}
         {this.renderRight()}
       </Block>
-    )
+    );
   }
 }
 
@@ -110,16 +110,16 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.black,
     borderRadius: theme.sizes.radius,
     fontSize: theme.sizes.font,
-    fontWeight: '500',
+    fontWeight: "500",
     color: theme.colors.black,
-    height: theme.sizes.base * 3,
+    height: theme.sizes.base * 3
   },
   toggle: {
-    position: 'absolute',
-    alignItems: 'flex-end',
+    position: "absolute",
+    alignItems: "flex-end",
     width: theme.sizes.base * 2,
     height: theme.sizes.base * 2,
     top: theme.sizes.base,
-    right: 0,
+    right: 0
   }
 });

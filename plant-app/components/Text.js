@@ -95,19 +95,19 @@ const styles = StyleSheet.create({
   },
   // variations
   regular: {
-    fontWeight: "normal",
+    fontWeight: "normal"
   },
   bold: {
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   semibold: {
-    fontWeight: "500",
+    fontWeight: "500"
   },
   medium: {
-    fontWeight: "500",
+    fontWeight: "500"
   },
   light: {
-    fontWeight: "200",
+    fontWeight: "200"
   },
   // position
   center: { textAlign: "center" },
