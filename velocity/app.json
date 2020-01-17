@@ -3,7 +3,7 @@
     "name": "velocity",
     "slug": "velocity",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android"
