@@ -11,22 +11,22 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@expo/samples": "2.1.1",
-    "@expo/vector-icons": "^10.0.0",
-    "expo": "^33.0.0",
-    "expo-asset": "^7.0.0",
-    "expo-font": "~5.0.1",
-    "react": "16.8.3",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
-    "react-native-maps": "~0.24.0",
-    "react-navigation": "^3.11.0",
-    "react-redux": "^6.0.0",
-    "redux": "^4.0.1",
+    "expo": "^36.0.0",
+    "expo-asset": "~8.0.0",
+    "react": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
+    "react-native-gesture-handler": "^1.5.3",
+    "react-native-maps": "0.26.1",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^1.9.3",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "babel-preset-expo": "^7.1.0",
-    "jest-expo": "^33.0.0"
+    "babel-preset-expo": "^8.0.0",
+    "jest-expo": "^36.0.0"
   },
   "private": true
 }
