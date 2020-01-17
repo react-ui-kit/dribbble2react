@@ -3,7 +3,7 @@
     "name": "parking-app",
     "slug": "parking-app",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android"

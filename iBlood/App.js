@@ -6,10 +6,10 @@ import {
   Image,
   TouchableOpacity
 } from "react-native";
-import { Font } from "expo";
-import { LineChart, Path } from 'react-native-svg-charts';
+import * as Font from "expo-font";
+import { LineChart, Path } from "react-native-svg-charts";
 import { Line } from "react-native-svg";
-import * as shape from 'd3-shape';
+import * as shape from "d3-shape";
 
 import { Block, Text } from "./components";
 import * as theme from "./theme";
@@ -78,7 +78,7 @@ class App extends React.Component {
 
   renderHeader() {
     const { user } = this.props;
-  
+
     return (
       <Block flex={0.42} column style={{ paddingHorizontal: 15 }}>
         <Block flex={false} row style={{ paddingVertical: 15 }}>
@@ -117,9 +117,7 @@ class App extends React.Component {
               Requests
             </Text>
           </Block>
-          <Block flex={1}>
-            {this.renderChart()}
-          </Block>
+          <Block flex={1}>{this.renderChart()}</Block>
         </Block>
       </Block>
     );
@@ -147,9 +145,12 @@ class App extends React.Component {
           </Block>
         </Block>
         <Block flex={0.75} column middle>
-          <Text h3 style={{ paddingVertical: 8, }}>{request.name}</Text>
+          <Text h3 style={{ paddingVertical: 8 }}>
+            {request.name}
+          </Text>
           <Text caption semibold>
-            {request.age}  •  {request.gender}  •  {request.distance}km  •  {request.time}hrs
+            {request.age} • {request.gender} • {request.distance}km •{" "}
+            {request.time}hrs
           </Text>
         </Block>
       </Block>
@@ -202,7 +203,7 @@ class App extends React.Component {
 App.defaultProps = {
   user: mocks.user,
   requests: mocks.requests,
-  chart: mocks.chart,
+  chart: mocks.chart
 };
 
 export default App;
@@ -221,7 +222,7 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     borderRadius: 25 / 2,
-    marginRight: 5,
+    marginRight: 5
   },
   requests: {
     marginTop: -55,

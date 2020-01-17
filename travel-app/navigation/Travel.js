@@ -1,8 +1,8 @@
-import React from 'react';
-import { createStackNavigator } from 'react-navigation';
+import React from "react";
+import { createStackNavigator } from "react-navigation-stack";
 
-import List from '../screens/List';
-import Article from '../screens/Article';
+import List from "../screens/List";
+import Article from "../screens/Article";
 
 export default createStackNavigator(
   {
@@ -10,6 +10,6 @@ export default createStackNavigator(
     Article
   },
   {
-    initialRouteName: "List",
+    initialRouteName: "List"
   }
 );
