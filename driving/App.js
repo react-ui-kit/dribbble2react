@@ -1,15 +1,16 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import { AppLoading, Font } from 'expo';
+import React from "react";
+import { StyleSheet } from "react-native";
+import { AppLoading } from "expo";
+import * as Font from "expo-font";
 
-import Navigation from './navigation';
-import { Block, Text } from './components';
+import Navigation from "./navigation";
+import { Block, Text } from "./components";
 
 export default class App extends React.Component {
   // add fonts support
   state = {
     isLoadingComplete: false
-  }
+  };
 
   handleResourcesAsync = async () => {
     return Promise.all([
@@ -19,10 +20,10 @@ export default class App extends React.Component {
         "Rubik-Bold": require("./assets/fonts/Rubik-Bold.ttf"),
         "Rubik-Italic": require("./assets/fonts/Rubik-Italic.ttf"),
         "Rubik-Light": require("./assets/fonts/Rubik-Light.ttf"),
-        "Rubik-Medium": require("./assets/fonts/Rubik-Medium.ttf"),
+        "Rubik-Medium": require("./assets/fonts/Rubik-Medium.ttf")
       })
     ]);
-  }
+  };
 
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
@@ -32,7 +33,7 @@ export default class App extends React.Component {
           onError={error => console.warn(error)}
           onFinish={() => this.setState({ isLoadingComplete: true })}
         />
-      )
+      );
     }
 
     return (
@@ -43,6 +44,4 @@ export default class App extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  
-});
+const styles = StyleSheet.create({});
