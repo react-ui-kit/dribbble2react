@@ -1,6 +1,6 @@
 // just copy this code from the driving repo :)
-import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
+import React, { Component } from "react";
+import { StyleSheet, View } from "react-native";
 
 import { theme } from "../constants";
 
@@ -42,62 +42,62 @@ export default class Block extends Component {
       space && { justifyContent: `space-${space}` },
       color && styles[color], // predefined styles colors for backgroundColor
       color && !styles[color] && { backgroundColor: color }, // custom backgroundColor
-      style, // rewrite predefined styles
+      style // rewrite predefined styles
     ];
 
     return (
       <View style={blockStyles} {...props}>
         {children}
       </View>
-    )
+    );
   }
 }
 
 export const styles = StyleSheet.create({
   block: {
-    flex: 1,
+    flex: 1
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: "row"
   },
   column: {
-    flexDirection: 'column',
+    flexDirection: "column"
   },
   card: {
-    borderRadius: theme.sizes.border,
+    borderRadius: theme.sizes.border
   },
   center: {
-    alignItems: 'center',
+    alignItems: "center"
   },
   middle: {
-    justifyContent: 'center',
+    justifyContent: "center"
   },
   left: {
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start"
   },
   right: {
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end"
   },
   top: {
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start"
   },
   bottom: {
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end"
   },
   shadow: {
     shadowColor: theme.colors.black,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
-    shadowRadius: 13,
+    shadowRadius: 13
   },
-  accent: { backgroundColor: theme.colors.accent, },
-  primary: { backgroundColor: theme.colors.primary, },
-  secondary: { backgroundColor: theme.colors.secondary, },
-  tertiary: { backgroundColor: theme.colors.tertiary, },
-  black: { backgroundColor: theme.colors.black, },
-  white: { backgroundColor: theme.colors.white, },
-  gray: { backgroundColor: theme.colors.gray, },
-  gray2: { backgroundColor: theme.colors.gray2, },
-  gray3: { backgroundColor: theme.colors.gray3, },
-  gray4: { backgroundColor: theme.colors.gray4, },
-})
+  accent: { backgroundColor: theme.colors.accent },
+  primary: { backgroundColor: theme.colors.primary },
+  secondary: { backgroundColor: theme.colors.secondary },
+  tertiary: { backgroundColor: theme.colors.tertiary },
+  black: { backgroundColor: theme.colors.black },
+  white: { backgroundColor: theme.colors.white },
+  gray: { backgroundColor: theme.colors.gray },
+  gray2: { backgroundColor: theme.colors.gray2 },
+  gray3: { backgroundColor: theme.colors.gray3 },
+  gray4: { backgroundColor: theme.colors.gray4 }
+});

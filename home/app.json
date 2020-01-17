@@ -3,7 +3,7 @@
     "name": "smart-home-app",
     "slug": "home",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android"
