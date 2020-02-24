@@ -12,7 +12,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
     "react-native-maps": "0.26.1",
     "react-native-modal": "^11.5.3",
-    "react-native-modal-dropdown": "^0.7.0"
+    "react-native-modal-dropdown": "^0.7.0",
+    "react-native-screens": "^2.0.0-beta.7"
   },
   "devDependencies": {
     "babel-preset-expo": "^8.0.0"
