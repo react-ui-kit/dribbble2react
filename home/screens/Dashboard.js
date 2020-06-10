@@ -32,7 +32,7 @@ class Dashboard extends Component {
             <Text h1>34</Text>
             <Text h1 size={34} height={80} weight='600' spacing={0.1}>°C</Text>
           </Block>
-          <Block flex column>
+          <Block flex={1} column>
             <Text caption>Humidity</Text>
             <LineChart
               yMax={100}
