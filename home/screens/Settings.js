@@ -53,11 +53,11 @@ class Settings extends Component {
             </Block>
             <Text caption>Temperature</Text>
           </Block>
-          <Block flex center>
+          <Block flex={1} center>
             <PanSlider />
           </Block>
         </Block>
-        <Block flex style={{ paddingTop: theme.sizes.base * 2 }}>
+        <Block flex={1} style={{ paddingTop: theme.sizes.base * 2 }}>
           <Block column style={{ marginVertical: theme.sizes.base * 2 }}>
             <Block row space="between">
               <Text welcome color="black">Direction</Text>
