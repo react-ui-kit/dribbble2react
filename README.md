@@ -2,7 +2,7 @@
 We're transforming [Dribbble](https://dribbble.com/) designs to React / React-Native code
 
 Don't miss the updates when I release new apps, just subscribe to our [React-UI-Kit newsletter](https://react-ui-kit.com/)
-
+Hey guys, I just updated my website with React-Native products and here is my discount code for you: **github25**
 
 | Project | Expo | Preview | Screens | Estimation | Status |
 | ------ | ------ | :------: | :------: | :------: | :------: |
