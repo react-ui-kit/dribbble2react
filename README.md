@@ -1,8 +1,9 @@
 # dribbble2react
 We're transforming [Dribbble](https://dribbble.com/) designs to React / React-Native code
 
-Don't miss the updates when I release new apps, just subscribe to our [React-UI-Kit newsletter](https://react-ui-kit.com/)
-Hey guys, I just updated my website with React-Native products and here is my discount code for you: **github25**
+Don't miss the updates when I release new apps, just subscribe to our [React-UI-Kit newsletter](https://react-ui-kit.com/).
+
+Checkout the new React-Native marketplace for ready-to-use UI code [react-ui-kit.com](https://react-ui-kit.com/)
 
 | Project | Expo | Preview | Screens | Estimation | Status |
 | ------ | ------ | :------: | :------: | :------: | :------: |
@@ -18,31 +19,4 @@ Hey guys, I just updated my website with React-Native products and here is my di
 | [Your app](https://github.com/react-ui-kit/dribbble2react/issues/new?assignees=&labels=&template=feature_request.md&title=) | - | Your design | - | ~ hours | :point_left::hammer_and_wrench: |
 
 ## Contributors
-
-### Code Contributors
-
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/react-ui-kit/dribbble2react/graphs/contributors"><img src="https://opencollective.com/dribbble2react/contributors.svg?width=890&button=false" /></a>
-
-### Financial Contributors
-
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/dribbble2react/contribute)]
-
-#### Individuals
-
 <a href="https://opencollective.com/dribbble2react"><img src="https://opencollective.com/dribbble2react/individuals.svg?width=890"></a>
-
-#### Organizations
-
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/dribbble2react/contribute)]
-
-<a href="https://opencollective.com/dribbble2react/organization/0/website"><img src="https://opencollective.com/dribbble2react/organization/0/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/1/website"><img src="https://opencollective.com/dribbble2react/organization/1/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/2/website"><img src="https://opencollective.com/dribbble2react/organization/2/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/3/website"><img src="https://opencollective.com/dribbble2react/organization/3/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/4/website"><img src="https://opencollective.com/dribbble2react/organization/4/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/5/website"><img src="https://opencollective.com/dribbble2react/organization/5/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/6/website"><img src="https://opencollective.com/dribbble2react/organization/6/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/7/website"><img src="https://opencollective.com/dribbble2react/organization/7/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/8/website"><img src="https://opencollective.com/dribbble2react/organization/8/avatar.svg"></a>
-<a href="https://opencollective.com/dribbble2react/organization/9/website"><img src="https://opencollective.com/dribbble2react/organization/9/avatar.svg"></a>
