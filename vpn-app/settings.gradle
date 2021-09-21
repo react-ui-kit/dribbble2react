@@ -1,0 +1,2 @@
+  include ':app', ':vpnLib'
+rootProject.name='vpn-app'
